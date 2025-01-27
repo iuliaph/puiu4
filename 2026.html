@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 - Anul recreării</title>
+  <style>
+    /* Resetare stiluri */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fundal și stiluri generale */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f7b2ad, #feb2a8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    /* Poza voastră pe mijloc */
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 80%;
+      max-height: 80%;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    /* Mesajul de sus */
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #ff3b5c;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Buton de navigare înapoi */
+    .btn {
+      padding: 12px 30px;
+      background-color: #ff3b5c;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Poza voastră -->
+  <div class="image-container">
+    <img src="images/poza_noastra2.jpg" alt="Poza noastră" id="poza_voastra">
+  </div>
+
+  <!-- Mesajul -->
+  <h1>În 2026, recreăm această poză!</h1>
+  <p>O nouă amintire, o nouă poveste, aceleași zâmbete. 💖</p>
+
+  <!-- Buton pentru a te întoarce -->
+  <a href="index.html" class="btn">Înapoi la pagina principală</a>
+</body>
+</html>
