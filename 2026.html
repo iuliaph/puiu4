@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 - Anul recreării</title>
+  <title>2026 - Valentine's Day</title>
   <style>
     /* Resetare stiluri */
     * {
@@ -15,25 +15,27 @@
     /* Fundal și stiluri generale */
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #f7b2ad, #feb2a8);
+      background: linear-gradient(to bottom, #ff99cc, #ff6699); /* Fundal în culori de Valentine's Day */
       color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
+      height: auto; /* Permite scroll */
       text-align: center;
       padding: 20px;
-      overflow: hidden;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    /* Poza voastră pe mijloc */
+    /* Poza într-un chenar pe mijloc */
     .image-container {
       position: relative;
       display: inline-block;
-      max-width: 80%;
-      max-height: 80%;
-      margin-bottom: 30px;
+      max-width: 90%;
+      max-height: 60%;
+      margin-bottom: 20px;
+      border: 5px solid #ff3b5c; /* Adaugă un chenar roșu */
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
@@ -44,21 +46,45 @@
       border-radius: 15px;
     }
 
-    /* Mesajul de sus */
+    /* Mesajul de sus cu inimioare animate */
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 600;
       margin-bottom: 20px;
       color: #ff3b5c;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: float 2s ease-in-out infinite; /* Efect animat */
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 400;
       color: white;
       margin-bottom: 40px;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Stil pentru inimioare animate */
+    h1::after {
+      content: '💖💖💖'; /* Adaugă inimioare */
+      display: block;
+      font-size: 2.5rem;
+      margin-top: 10px;
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    /* Efect de flotare */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Efect pentru inimioare care bat */
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
 
     /* Buton de navigare înapoi */
@@ -85,19 +111,53 @@
       transform: scale(0.95);
     }
 
+    /* GIF mic sub text */
+    .gif {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Responsivitate pentru mobil */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .image-container {
+        max-height: 50%;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+
+      .gif {
+        width: 80px;
+        height: 80px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Poza voastră -->
+  <!-- Poza voastră într-un chenar pe mijloc -->
   <div class="image-container">
-    <img src="images/poza_noastra2.jpg" alt="Poza noastră" id="poza_voastra">
+    <img src="images/poza_voastra.jpg" alt="Poza noastră" id="poza_voastra">
   </div>
 
   <!-- Mesajul -->
-  <h1>În 2026, recreăm această poză!</h1>
-  <p>O nouă amintire, o nouă poveste, aceleași zâmbete. 💖</p>
+  <h1>Te iubesc, puiu iubitu! 💖</h1>
+  <p>În 2026, recreăm această poză boschi! 💘</p>
 
   <!-- Buton pentru a te întoarce -->
   <a href="index.html" class="btn">Înapoi la pagina principală</a>
+
+  <!-- GIF mic sub text -->
+  <img src="images/noi.gif" alt="GIF de inimioare" class="gif">
 </body>
 </html>
